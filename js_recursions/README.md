@@ -1,5 +1,5 @@
-Write a recursive function to calculate the factorial of a number.
-Implement a recursive function to calculate the nth Fibonacci number.
+1. Write a recursive function to calculate the factorial of a number.
+2. Implement a recursive function to calculate the nth Fibonacci number.
 Write a recursive function to reverse a string.
 Implement a recursive function to check if a string is a palindrome.
 Write a recursive function to calculate the sum of an array of numbers.
