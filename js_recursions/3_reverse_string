@@ -1,0 +1,10 @@
+function reverseString(str) {
+  if (str === "") {
+    return ""; // Base case: an empty string
+  }
+
+  const firstChar = str.charAt(0); // Get the first character of the string
+  const remainingChars = str.slice(1); // Get the remaining characters of the string
+
+  return reverseString(remainingChars) + firstChar; // Recursive call to reverse the remaining characters + the first character
+}
