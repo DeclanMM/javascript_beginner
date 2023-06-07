@@ -1,0 +1,18 @@
+function palindromeCheck(str) {
+  let newStr = ""; // Declare the newStr variable outside the if-else statement
+
+  if (str === "") {
+    newStr = ""; // Base case: an empty string
+  } else {
+    const firstChar = str.charAt(0); 
+    const remainingChars = str.slice(1); 
+
+    newStr = palindromeCheck(remainingChars) + firstChar;
+  }
+  
+  if (newStr === str) {
+    return true;
+  } else {
+    return false;
+  }
+}
