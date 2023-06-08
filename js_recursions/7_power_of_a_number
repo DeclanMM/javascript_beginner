@@ -1,0 +1,5 @@
+function expoNumber(num, power){
+    if(power === 0)  return 1;
+    else
+      return num * expoNumber(num, power - 1);
+}
