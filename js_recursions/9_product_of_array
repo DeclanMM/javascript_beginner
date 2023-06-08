@@ -1,0 +1,10 @@
+function productOfElements(arr){
+    if(arr.length === 0){
+        return 1;
+    }
+    else{ 
+      let lastNum = arr[arr.length - 1];
+      arr.pop();
+      return lastNum * productOfElements(arr)
+    }
+}
