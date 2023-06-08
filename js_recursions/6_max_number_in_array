@@ -1,0 +1,8 @@
+function maxNumber(arr) {
+  if (arr.length === 1) {
+    return arr[0];
+  } else {
+    const subMax = maxNumber(arr.slice(1));
+    return Math.max(arr[0], subMax);
+  }
+}
