@@ -1,0 +1,15 @@
+function occElement(arr, element){
+    if(arr.length === 0){
+        return 0;
+    }
+    
+    let count = 0;
+    
+    if(arr[arr.length - 1] === element){
+        count++;
+    }
+    arr.pop();
+    
+    return count += occElement(arr, element);
+      
+}
