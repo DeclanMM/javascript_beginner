@@ -20,3 +20,16 @@ function sumOfDigits(number) {
 }
 
 console.log(sumOfDigits(12345678))
+
+
+// The following is a cleaner version of the code
+
+function sumOfDigits(number) {
+  if (number < 10) {
+    return number;
+  } else {
+    let lastDigit = number % 10;
+    let remainingDigits = Math.floor(number / 10);
+    return lastDigit + sumOfDigits(remainingDigits);
+  }
+}
