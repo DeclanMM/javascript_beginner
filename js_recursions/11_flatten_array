@@ -1,0 +1,22 @@
+function flattenArray(arr, index = 0) {
+  // Base case: Check if we have reached the end of the array
+  if (index >= arr.length) {
+    return [];
+  }
+  
+  let flattened = [];
+
+  if (Array.isArray(arr[index])) {
+    flattened = flattened.concat(flattenArray(arr[index])); // Recursively flatten the nested array
+  } else {
+    flattened.push(arr[index]); // Push non-nested elements to the flattened array
+  }
+  
+  const remainingFlattened = flattenArray(arr, index + 1); // Recursively flatten the remaining elements
+
+  return flattened.concat(remainingFlattened); // Concatenate the flattened array with the remaining flattened elements
+}
+
+// Example usage
+const nestedArray = [1, [2, 3], [4, [5, 6]]];
+const flattenedArray = flattenArray(nestedArray);
