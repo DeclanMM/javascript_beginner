@@ -1,0 +1,22 @@
+function sumOfDigits(number) {
+  let digits = [];
+ 
+  while (number > 0) {
+  let digit = number % 10;
+  digits.push(digit);
+  number = Math.floor(number / 10);
+}
+  function sumOfArray(digits){
+    if(digits.length === 0) return 0;
+    else
+    {
+      const lastNum = digits[digits.length - 1];
+      digits.pop();
+    
+      return lastNum + sumOfArray(digits);
+    }
+}
+  return sumOfArray(digits);
+}
+
+console.log(sumOfDigits(12345678))
