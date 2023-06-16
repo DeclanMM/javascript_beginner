@@ -1,0 +1,10 @@
+function lengthOfStr(str) {
+    let num = 0;
+    for(let i = 0; i <= str.length; i++) {
+       if (i === str.length) {
+           return num + i
+       }
+    }
+}
+
+console.log(lengthOfStr("Declan"))
