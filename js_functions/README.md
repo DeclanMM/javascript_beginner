@@ -1,5 +1,4 @@
 1.Write a function to add two numbers.
-
 2.Write a function to subtract two numbers.
 3.Write a function to multiply two numbers.
 Write a function to divide two numbers.
