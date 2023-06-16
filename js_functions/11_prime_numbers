@@ -1,0 +1,15 @@
+function primeNum(num) {
+    if (num <= 1) {
+        return "Not prime";
+    }
+    
+    for (let i = 2; i <= num / 2; i++) {
+        if (num % i === 0) {
+            return "Not prime";
+        }
+    }
+    
+    return "Prime";
+}
+
+console.log(primeNum(199));
