@@ -1,1 +1,6 @@
+function minimumValue(arr) {
+    return Math.min(...arr);
+}
 
+const numbers = [2, 4, 7, 3, 9];
+console.log(minimumValue(numbers));
