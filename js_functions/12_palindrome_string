@@ -1,0 +1,13 @@
+function palindromeStr(str) {
+    let reverse = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverse += str[i];
+    }
+    if (reverse === str) {
+        return "Palindrome";
+    } else {
+        return "Not Palindrome";
+    }
+}
+
+console.log(palindromeStr("madam"));
