@@ -1,0 +1,16 @@
+function averageNum(arr) {
+    function sumOfArray(arr) {
+        if (arr.length === 0){
+            return 0;
+        }
+        else {
+            const lastNum = arr[arr.length - 1]
+            arr.pop();
+            
+            return lastNum + sumOfArray(arr);
+        }
+    }
+    return sumOfArray(arr) / arr.length;
+}
+
+console.log(averageNum([2, 4, 7, 3, 9]));
