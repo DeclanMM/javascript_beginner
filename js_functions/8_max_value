@@ -1,0 +1,3 @@
+function maximumValue (arr) {
+    return Math.max(...arr);
+}
