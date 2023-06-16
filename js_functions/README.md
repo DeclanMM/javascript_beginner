@@ -1,6 +1,6 @@
-Write a function to add two numbers.
-Write a function to subtract two numbers.
-Write a function to multiply two numbers.
+1.Write a function to add two numbers.
+2.Write a function to subtract two numbers.
+3.Write a function to multiply two numbers.
 Write a function to divide two numbers.
 Write a function to calculate the square of a number.
 Write a function to calculate the cube of a number.
