@@ -1,0 +1,11 @@
+function valueOfArray(value, arr) {
+   for(let num of arr) {
+       if(arr.includes(value)) {
+           return true;
+       }
+   }
+   
+   return false;
+}
+
+console.log(valueOfArray(3, [1, 2, 3, 4, 5, 6]));
