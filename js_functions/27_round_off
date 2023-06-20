@@ -1,0 +1,5 @@
+function roundOff(decimal, decimalplaces) {
+    return decimal.toFixed(decimalplaces);
+}
+
+console.log(roundOff(3.142768, 3));
