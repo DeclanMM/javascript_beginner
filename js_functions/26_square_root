@@ -1,0 +1,5 @@
+function squareRoot(number) {
+    return number ** 0.5;
+}
+
+console.log(squareRoot(16));
