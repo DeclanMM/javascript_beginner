@@ -1,0 +1,3 @@
+function circumferenceOfCircle(radius) {
+    return radius * 3.142 * 2;
+}
