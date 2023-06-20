@@ -1,4 +1,5 @@
 Write a loop that prints numbers from 1 to 10, but skips even numbers.
+
 Create a loop that calculates the sum of numbers from 1 to 100.
 Write a loop that prints the multiplication table for a given number.
 Create a loop that iterates over an array and prints the square of each element.
