@@ -1,0 +1,3 @@
+function areaOfCircle(radius) {
+    return radius * 3.142;
+}
