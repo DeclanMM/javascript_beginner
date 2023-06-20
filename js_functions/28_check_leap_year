@@ -1,0 +1,8 @@
+function checkLeapYear(year) {
+    if(year % 4 === 0) return "Leap Year"
+    else
+      return "Not leap Year"
+}
+
+
+console.log(checkLeapYear(2020))
