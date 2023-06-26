@@ -1,0 +1,23 @@
+class BankAcc {
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+    return this.balance;
+  }
+
+  withdraw(money) {
+    let moneyOut = this.balance - money;
+    if (moneyOut < 0) return "Error";
+    else {
+      this.balance -= money;
+      return this.balance;
+    }
+  }
+}
+
+const bankAcc1 = new BankAcc (1234567, 5000);
+console.log(bankAcc1.deposit(2000));
