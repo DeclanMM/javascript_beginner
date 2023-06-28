@@ -1,0 +1,14 @@
+class Circle {
+    constructor (radius) {
+        this.radius = radius;
+    }
+    circumference () {
+        return 3.14159 * this.radius * 2;
+    }
+    area () {
+        return 3.14159 * this.radius * this.radius;
+    }
+}
+
+const circle1 = new Circle (7);
+console.log(circle1.circumference());
