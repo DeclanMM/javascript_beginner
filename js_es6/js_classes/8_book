@@ -1,0 +1,13 @@
+class Book {
+    constructor (title, author, year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
+    displayDetails () {
+        console.log(`This book called '${this.title}' and is written by '${this.author}' in the year ${this.year}`)
+    }
+}
+
+const book1 = new Book ("Who moved my cheese", "Declan", 2022);
+book1.displayDetails();
