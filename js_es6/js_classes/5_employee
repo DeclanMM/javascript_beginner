@@ -1,0 +1,28 @@
+class Employee {
+    constructor (name, position, salary) {
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
+    }
+    bonus () {
+        if (this.salary <= 500) {
+            return 0.02 * this.salary;
+        }
+        else if (this.salary > 500 && this.salary <= 1000) {
+            return 0.04 * this.salary;
+        }
+        else if (this.salary > 1000 && this.salary <=2000) {
+            return 0.06 * this.salary; 
+        } 
+        else if (this.salary > 2000 && this.salary <= 3000) {
+            return 0.08 * this.salary;
+        }
+        else {
+            return 0.10 * this.salary
+        }
+    }
+}
+
+
+const employee1 = new Employee ("Declan", "Senior Editor", "1500");
+console.log(employee1.bonus());
