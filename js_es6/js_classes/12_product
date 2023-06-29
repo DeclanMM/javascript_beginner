@@ -1,0 +1,21 @@
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  discount() {
+    if (this.price <= 10) {
+      return this.price - 0.1 * this.price;
+    } else if (this.price <= 50 && this.price > 10) {
+      return this.price - 0.2 * this.price;
+    } else if (this.price <= 100 && this.price > 50) {
+      return this.price - 0.3 * this.price;
+    } else {
+      return this.price - 0.4 * this.price;
+    }
+  }
+}
+
+const product1 = new Product("Airpods", 75);
+console.log(product1.discount());
