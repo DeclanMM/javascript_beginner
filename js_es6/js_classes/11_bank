@@ -1,0 +1,13 @@
+class Bank {
+    constructor (name, branches) {
+        this.name = name;
+        this.branches = branches;
+    }
+    addBranch (newBranch) {
+        this.branches.push(newBranch);
+        console.log(this.branches.length);
+    }
+}
+
+const bank1 = new Bank ("Stanchart", ["Nairobi", "Kisumu", "Moyale", "Meru"]);
+bank1.addBranch("Mombasa");
