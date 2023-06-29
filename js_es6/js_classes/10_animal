@@ -1,0 +1,10 @@
+class Animal {
+  constructor(name, sound) {
+    this.name = name;
+    this.sound = sound;
+  }
+
+  makeSound() {
+    console.log(`${this.name} makes the sound "${this.sound}".`);
+  }
+}
