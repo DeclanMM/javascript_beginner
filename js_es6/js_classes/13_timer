@@ -1,0 +1,66 @@
+class Timer {
+  constructor(duration, interval) {
+    this.duration = duration;
+    this.interval = interval;
+    this.timerId = null;
+    this.elapsedTime = 0;
+  }
+
+  start() {
+    if (this.timerId) {
+      console.log("Timer is already running.");
+      return;
+    }
+
+    console.log("Timer started.");
+    this.timerId = setInterval(() => {
+      this.elapsedTime += this.interval;
+      console.log(`Elapsed time: ${this.elapsedTime} ms`);
+
+      if (this.elapsedTime >= this.duration) {
+        this.stop();
+        console.log("Timer finished.");
+      }
+    }, this.interval);
+  }
+
+  stop() {
+    if (this.timerId) {
+      clearInterval(this.timerId);
+      this.timerId = null;
+      console.log("Timer stopped.");
+    } else {
+      console.log("Timer is not running.");
+    }
+  }
+
+  reset() {
+    this.elapsedTime = 0;
+    console.log("Timer reset.");
+  }
+}
+
+const timer = new Timer(5000, 1000);
+//timer.start();
+//timer.stop(); 
+timer.reset();
+
+
+
+
+
+/*The Timer class is defined using the class keyword. It has a constructor that takes two parameters: duration and interval. These parameters represent the total duration of the timer and the interval at which the timer should update, respectively.
+
+Inside the constructor, the provided duration and interval values are stored as properties of the class using this.duration = duration and this.interval = interval.
+
+The class also has additional properties: timerId is used to store the ID of the interval timer, elapsedTime keeps track of the elapsed time since the timer started.
+
+The start() method is used to start the timer. It first checks if the timer is already running by verifying if this.timerId has a truthy value. If the timer is already running, it logs a message and returns without starting a new timer.
+
+If the timer is not already running, it logs a message indicating that the timer has started. It then uses setInterval to create a new interval timer. The callback function passed to setInterval increments the elapsedTime by the interval value and logs the current elapsed time. It also checks if the elapsed time exceeds or equals the total duration of the timer. If so, it stops the timer and logs a message indicating that the timer has finished.
+
+The stop() method is used to stop the timer. It checks if the timer is currently running by verifying if this.timerId has a truthy value. If it is running, clearInterval is called with the stored timerId to stop the interval timer. The timerId is set to null to indicate that the timer is not running. It logs a message indicating that the timer has stopped. If the timer is not running, it logs a message indicating that the timer is not currently running.
+
+The reset() method is used to reset the timer. It simply sets the elapsedTime property back to 0. It logs a message indicating that the timer has been reset.
+
+Example usage of the Timer class is provided at the end of the code. It demonstrates creating a new timer object with a duration of 5000ms (5 seconds) and an interval of 1000ms (1 second). The start() method is called to start the timer, which then logs the elapsed time every second until the total duration is reached. The stop() method is called to stop the timer before it finishes. Finally, the reset() method is called to reset the timer and set the elapsed time back to 0.*/
